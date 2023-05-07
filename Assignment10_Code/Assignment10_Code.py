@@ -34,12 +34,10 @@ for i in range(run_to+1):
 
     f = f - dt*np.matmul(lap,f)
     
-import numpy as np
-
 # Extract temperature values at tstep = 0, 50, and 100
-tstep0_temp = f[0, :]
-tstep50_temp = f[50, :]
-tstep100_temp = f[100, :]
+tstep0_temp = f[0 :]
+tstep50_temp = f[50 :]
+tstep100_temp = f[100 :]
 
 # Calculate mean and standard deviation using NumPy functions
 tstep0_mean = np.mean(tstep0_temp)
@@ -50,7 +48,6 @@ tstep0_std = np.std(tstep0_temp)
 tstep50_std = np.std(tstep50_temp)
 tstep100_std = np.std(tstep100_temp)
 
-# Print the results
 print("Mean temperature at tstep = 0: {:.2f}".format(tstep0_mean))
 print("Standard deviation of temperature at tstep = 0: {:.2f}".format(tstep0_std))
 
